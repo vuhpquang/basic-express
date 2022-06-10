@@ -7,4 +7,6 @@ router.post(
   userController.addUser,
 );
 
+router.get('/getAll', userController.getAll);
+
 module.exports = router;

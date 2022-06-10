@@ -17,7 +17,17 @@ const userController = {
       } catch (err) {
         res.status(500).json(err);
       }
-    }
+    },
+
+    //GET All Authors
+    getAll: async (req, res) => {
+      try {
+        const allUsers = await User.find({});
+        res.status(200).json(allUsers);
+      } catch (err) {
+        res.status(500).json(err);
+      }
+    },
 };
 
 module.exports = userController;

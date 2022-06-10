@@ -6,6 +6,7 @@ var bodyParser = require('body-parser');
 const morgan = require('morgan');
 const dotenv = require('dotenv');
 const userRoute = require('./routes/user.route');
+const bookRoute = require('./routes/book.route');
 
 const PORT = process.env.PORT || 5000;
 
@@ -34,5 +35,6 @@ app.get('/test', (req, res) => {
 
 //ROUTES
 app.use('/user', userRoute);
+app.use('/book', bookRoute);
 
 
